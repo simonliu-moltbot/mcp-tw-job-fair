@@ -1,0 +1,9 @@
+services:
+  mcp-job-fair:
+    build: .
+    image: mcp-tw-job-fair
+    ports:
+      - "${PORT:-8000}:8000"
+    env_file:
+      - .env
+    restart: always
